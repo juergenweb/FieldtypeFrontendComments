@@ -675,7 +675,7 @@ class FieldtypeFrontendComments extends FieldtypeMulti implements ConfigurableMo
             $post = null;
             if ($_POST) {
                 $post = $this->wire('input')->post();
-                $currentUrl = $_SERVER['HTTP_REFERER'];
+                $currentUrl = $_SERVER['HTTP_REFERER'] ?? '';
             }
 
             if (str_contains($currentUrl, 'setup/field/edit')) {

@@ -52,7 +52,7 @@ class FrontendCommentArray extends PaginatedArray implements WirePaginatable
         $this->userdata = [
             'user_id' => $this->wire('user')->id,
             'ip' => $this->wire('session')->getIP(),
-            'user_agent' => $_SERVER['HTTP_USER_AGENT']
+            'user_agent' => $_SERVER['HTTP_USER_AGENT'] ?? ''
         ];
 
         // grab configuration values from the FrontendForms module

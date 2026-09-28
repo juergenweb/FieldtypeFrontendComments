@@ -722,7 +722,7 @@ class FrontendCommentForm extends Form
             // set the user id
             $newComment->ip = $this->wire('session')->getIP();
             // get the IP address of the user
-            $newComment->user_agent = $_SERVER['HTTP_USER_AGENT'];
+            $newComment->user_agent = $_SERVER['HTTP_USER_AGENT'] ?? '';
             // get the user agent header
             $newComment->sort = count($this->comments) + 1;
             // increase the sort
